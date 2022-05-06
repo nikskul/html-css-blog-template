@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cube</title>
+		<link rel="stylesheet" type="text/css" href="styles/cube.css">
+				<style>
+				 html, body, #container{
+				 	margin: 0px;
+				 	padding: 0px;
+				 	width: 100%;
+				 	height: 100%;
+				 	background: transparent;
+				 }
+				</style>
+	</head>
+	<body>
+		<div id='container'></div>
+
+		<script src='js/cube/cuber.min.js'></script>
+		<script src='js/photon.js'></script>
+		<script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+
+		<script>
+
+			var container 	= document.querySelector( '#container' ),
+				cube 		= new ERNO.Cube();
+				light 		= new Photon.Light( 10, 0, 100 );
+
+			container.appendChild( cube.domElement );
+			cube.shuffle();
+
+		</script>
+	</body>
+</html>
